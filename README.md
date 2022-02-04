@@ -1,5 +1,5 @@
 # -OOAD-afremdilmac-2122
-*OO AD
+* OO AD
 * DILMAC AFREM
 * toegepaste informatica
 * 2021 - 2022

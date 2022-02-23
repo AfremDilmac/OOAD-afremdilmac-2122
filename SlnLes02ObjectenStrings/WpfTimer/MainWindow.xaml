@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:WpfTimer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid x:Name="test">
+        <Label x:Name="lblCount" Content="" HorizontalAlignment="Left" Margin="352,49,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.979,0.493" Height="83" FontSize="30"/>
+        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="53,49,0,0" VerticalAlignment="Top" Width="75" Click="btnStart_Click"/>
+        <Button x:Name="btnStop" Content="STOP" HorizontalAlignment="Left" Margin="53,102,0,0" VerticalAlignment="Top" Width="75" Click="btnStop_Click"/>
+        <Button Content="RESET" HorizontalAlignment="Left" Margin="53,151,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Rectangle x:Name="rctMinuts" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="0" Margin="161,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.414,-6.381"/>
+        <Rectangle x:Name="rctSeconds" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="0" Margin="254,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

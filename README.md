@@ -1,4 +1,4 @@
-# -OOAD-afremdilmac-2122
+# OOAD-afremdilmac-2122
 * OO AD
 * DILMAC AFREM
 * toegepaste informatica

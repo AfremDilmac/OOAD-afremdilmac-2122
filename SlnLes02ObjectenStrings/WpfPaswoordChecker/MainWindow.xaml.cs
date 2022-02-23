@@ -23,9 +23,8 @@ namespace WpfPaswoordChecker
         public MainWindow()
         {
             InitializeComponent();
-
         }
-
+      
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (tbxWachtwoord.Text.Length >= 8)
@@ -49,7 +48,8 @@ namespace WpfPaswoordChecker
                 lblSpecial.Foreground = new SolidColorBrush(Colors.Green);
             }
 
-            if (tbxWachtwoord.Text.Length >= 8 && tbxWachtwoord.Text.Any(char.IsUpper) && tbxWachtwoord.Text.Any(char.IsLower) && tbxWachtwoord.Text.Any(char.IsDigit) && !tbxWachtwoord.Text.Any(char.IsLetterOrDigit)) {
+            if (tbxWachtwoord.Text.Length >= 8 && tbxWachtwoord.Text.Any(char.IsUpper) && tbxWachtwoord.Text.Any(char.IsLower) && tbxWachtwoord.Text.Any(char.IsDigit) && !tbxWachtwoord.Text.Any(char.IsLetterOrDigit))
+            {
                 btnRegister.IsEnabled = true;
             }
         }

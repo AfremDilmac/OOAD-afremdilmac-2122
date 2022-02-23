@@ -24,11 +24,10 @@ namespace WpfPunten
         {
             InitializeComponent();
         }
-
         private void btnToevoegen_Click(object sender, RoutedEventArgs e)
         {
             //naam en punt / 100 wordt toegevoegd naar de lijst
-            string text = ($"{boxNaam.Text} - {boxPunt.Text}/100");
+            string text = $"{boxNaam.Text} - {boxPunt.Text}/100";
 
             ListBoxItem newItem = new ListBoxItem();
             newItem.Content = text;

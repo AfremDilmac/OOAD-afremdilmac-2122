@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6ac1e4e8-80e7-4f4d-8e2e-2e13dc8efd2e": {
+      "ProjectGuid": "6ac1e4e8-80e7-4f4d-8e2e-2e13dc8efd2e",
+      "DisplayName": "WpfCopyVs1",
+      "ColorIndex": 0
+    },
+    "26f5e25a-3cfd-4c2e-88e6-8092325f09c9": {
+      "ProjectGuid": "26f5e25a-3cfd-4c2e-88e6-8092325f09c9",
+      "DisplayName": "WpfCopyVs2",
+      "ColorIndex": 1
+    },
+    "0c760b39-851f-438c-9de8-0ca03d6b2abd": {
+      "ProjectGuid": "0c760b39-851f-438c-9de8-0ca03d6b2abd",
+      "DisplayName": "WpfFileInfo",
+      "ColorIndex": 2
+    },
+    "f683b7a9-61e3-41cf-9bdb-f22c5e322363": {
+      "ProjectGuid": "f683b7a9-61e3-41cf-9bdb-f22c5e322363",
+      "DisplayName": "ConsoleCsv",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

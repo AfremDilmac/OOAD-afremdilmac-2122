@@ -1,0 +1,15 @@
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net6.0\ConsoleCsv.exe
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net6.0\ConsoleCsv.deps.json
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net6.0\ConsoleCsv.runtimeconfig.json
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net6.0\ConsoleCsv.dll
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net6.0\ref\ConsoleCsv.dll
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net6.0\ConsoleCsv.pdb
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net6.0\ConsoleCsv.csproj.AssemblyReference.cache
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net6.0\ConsoleCsv.GeneratedMSBuildEditorConfig.editorconfig
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net6.0\ConsoleCsv.AssemblyInfoInputs.cache
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net6.0\ConsoleCsv.AssemblyInfo.cs
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net6.0\ConsoleCsv.csproj.CoreCompileInputs.cache
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net6.0\ConsoleCsv.dll
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net6.0\ref\ConsoleCsv.dll
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net6.0\ConsoleCsv.pdb
+D:\farm\FarmingSimulator\OOAD-afremdilmac-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net6.0\ConsoleCsv.genruntimeconfig.cache

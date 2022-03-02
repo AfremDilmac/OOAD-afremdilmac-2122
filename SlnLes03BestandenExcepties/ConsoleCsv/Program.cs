@@ -11,20 +11,42 @@ namespace ConsoleCsv
     {
         static void Main(string[] args)
         {
-            // prepare
-            List<string> lines = new List<string>();
-            lines.Add("Dit is lijn 1");
-            lines.Add("Dit is lijn 2");
-            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string filePath = System.IO.Path.Combine(folderPath, "myfile.txt");
-            // open stream and start writing
+            const int AANTAL_WEDSTRIJDEN = 100;
+
+            string[] NaamSpelers = new string[] { "Bilal", "Zakaria", "Anthony", "Omar", "Rogier", "Serge" };
+            string[] Spellen = new string[] { "Schaken", "Backgammon", "Dammen" };
+            string[] Scores = new string[] { "1--2", "0--3", "2--1", "3--0" };
+
+            int SpelerA;
+            Random r = new Random();
+
+            string csvDocument = " ";
+
+            for (int i = 0; i < AANTAL_WEDSTRIJDEN; i++)
+            {
+                int SpelerB = r.Next(0, NaamSpelers.Length);
+                SpelerA = r.Next(0, NaamSpelers.Length);
+                int typeSpelKiezen = r.Next(0, Spellen.Length);
+
+                int Punten = r.Next(0, Scores.Length);
+
+                string typeSpel = Spellen[typeSpelKiezen];
+                string score = Scores[Punten];
+                string Speler1 = NaamSpelers[SpelerB];
+                string Speler2 = NaamSpelers[SpelerA];
+
+                csvDocument += $"{i + 1};{Speler1};{Speler2};{typeSpel};{score.ToString()}{Environment.NewLine}";
+            }
+
+            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string filePath = System.IO.Path.Combine(folderPath, "Wedstrijden.csv");
+
             using (StreamWriter writer = File.CreateText(filePath))
             {
-                foreach (string line in lines)
-                {
-                    writer.WriteLine(line);
-                }
-            } // stream closes automatically
+                writer.WriteLine(csvDocument);
+            }
+
+            Console.WriteLine("csv document gemaakt op pc");
             Console.ReadKey();
         }
     }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\farm\\FarmingSimulator\\OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\ConsoleCsv.csproj": {}
+    "D:\\ooad\\-OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\ConsoleCsv.csproj": {}
   },
   "projects": {
-    "D:\\farm\\FarmingSimulator\\OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\ConsoleCsv.csproj": {
+    "D:\\ooad\\-OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\ConsoleCsv.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\farm\\FarmingSimulator\\OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\ConsoleCsv.csproj",
+        "projectUniqueName": "D:\\ooad\\-OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\ConsoleCsv.csproj",
         "projectName": "ConsoleCsv",
-        "projectPath": "D:\\farm\\FarmingSimulator\\OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\ConsoleCsv.csproj",
-        "packagesPath": "C:\\Users\\32497\\.nuget\\packages\\",
-        "outputPath": "D:\\farm\\FarmingSimulator\\OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\obj\\",
+        "projectPath": "D:\\ooad\\-OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\ConsoleCsv.csproj",
+        "packagesPath": "C:\\Users\\Afrem\\.nuget\\packages\\",
+        "outputPath": "D:\\ooad\\-OOAD-afremdilmac-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\32497\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Afrem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,12 +49,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

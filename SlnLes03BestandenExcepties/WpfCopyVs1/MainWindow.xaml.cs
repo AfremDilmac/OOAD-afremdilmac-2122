@@ -28,22 +28,23 @@ namespace WpfCopyVs1
         }
         private void btnGo_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            dialog.Filter = "Tekstbestanden|*.TXT;*.TEXT";
-            string chosenFileName;
-            bool? dialogResult = dialog.ShowDialog();
-            if (dialogResult == true)
+            try
             {
-                // user picked a file and pressed OK
-                chosenFileName = dialog.FileName; // user accepted
-                FileInfo fi = new FileInfo(chosenFileName);
-                boxIn.Text += $"{fi.Name}";
-                boxOut.Text += $"out{fi.Extension}";
-                lblUitvoer.Content = $"bestand is overgezet";
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                dialog.Filter = "Tekstbestanden|*.TXT;*.TEXT";
+                string chosenFileName;
+                    // user picked a file and pressed OK
+                    chosenFileName = dialog.FileName; // user accepted
+                    FileInfo fi = new FileInfo(chosenFileName);
+                    boxIn.Text += $"{fi.Name}";
+                    boxOut.Text += $"out{fi.Extension}";
+                    lblUitvoer.Content = $"bestand is overgezet";
+                
             }
-            else
+            catch (FileNotFoundException ex)
             {
+
                 lblUitvoer.Content = "geen bestand gekozen";
             }
         }

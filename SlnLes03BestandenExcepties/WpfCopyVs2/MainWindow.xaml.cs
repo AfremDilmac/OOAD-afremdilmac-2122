@@ -28,35 +28,53 @@ namespace WpfCopyVs2
         }
         private void btnKies_Click(object sender, RoutedEventArgs e)
         {
-
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            dialog.Filter = "Tekstbestanden|*.TXT;*.TEXT";
-            string chosenFileName;
-            bool? dialogResult = dialog.ShowDialog();
-            if (dialogResult == true)
+            try
             {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                dialog.Filter = "Tekstbestanden|*.TXT;*.TEXT";
+                string chosenFileName;
                 // user picked a file and pressed OK
                 chosenFileName = dialog.FileName; // user accepted
                 FileInfo fi = new FileInfo(chosenFileName);
                 boxZoek.Text = chosenFileName;
+               
             }
+            catch (FileNotFoundException ex)
+            {
+                lblUitvoer.text = "File not found";
+               
+            }
+
+           
         }
 
         private void btnGo_Click(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog();
-            dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            dialog.Filter = "Tekstbestanden|*.TXT;*.TEXT";
-            dialog.FileName = "savedfile.txt";
-            if (dialog.ShowDialog() == true)
+
+            try
             {
-                File.WriteAllText(dialog.FileName, "your saved text here");
+                SaveFileDialog dialog = new SaveFileDialog();
+                dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                dialog.Filter = "Tekstbestanden|*.TXT;*.TEXT";
+                dialog.FileName = "savedfile.txt";
+                if (dialog.ShowDialog() == true)
+                {
+                    File.WriteAllText(dialog.FileName, "your saved text here");
+                }
+                else
+                {
+                    // user pressed Cancel or escaped dialog window
+                    lblUitvoer.text = "Event cancelled";
+                }
             }
-            else
+            catch (FileNotFoundException ex)
             {
-                // user pressed Cancel or escaped dialog window
+                lblUitvoer.text = "Event cancelled";
+               
             }
+
+            
         }
 
     }

@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="autopilot.jpg" />
+    <None Remove="color.jpg" />
+    <None Remove="Model3.jpg" />
+    <None Remove="Model3Black.jpg" />
+    <None Remove="Model3Red.jpg" />
+    <None Remove="Model3White.jpg" />
+    <None Remove="modelS.jpg" />
+    <None Remove="ModelSBlack.jpg" />
+    <None Remove="ModelSRed.jpg" />
+    <None Remove="ModelSWhite.jpg" />
+    <None Remove="modelX.jpg" />
+    <None Remove="ModelXBlack.jpg" />
+    <None Remove="ModelXRed.jpg" />
+    <None Remove="ModelXWhite.jpg" />
+    <None Remove="rims.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="autopilot.jpg" />
+    <Resource Include="color.jpg" />
+    <Resource Include="Model3.jpg" />
+    <Resource Include="Model3Black.jpg" />
+    <Resource Include="Model3Red.jpg" />
+    <Resource Include="Model3White.jpg" />
+    <Resource Include="modelS.jpg" />
+    <Resource Include="ModelSBlack.jpg" />
+    <Resource Include="ModelSRed.jpg" />
+    <Resource Include="ModelSWhite.jpg" />
+    <Resource Include="modelX.jpg" />
+    <Resource Include="ModelXBlack.jpg" />
+    <Resource Include="ModelXRed.jpg" />
+    <Resource Include="ModelXWhite.jpg" />
+    <Resource Include="rims.jpg" />
+  </ItemGroup>
+
+</Project>

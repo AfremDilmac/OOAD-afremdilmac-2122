@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDeel1A", "WpfDeel1A\WpfDeel1A.csproj", "{39C6F54F-9AE2-44E7-809A-00293ADFB9C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCarConfigurator", "WpfCarConfigurator\WpfCarConfigurator.csproj", "{B03DF7EC-3B70-44FA-917A-252C43BE629E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{39C6F54F-9AE2-44E7-809A-00293ADFB9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39C6F54F-9AE2-44E7-809A-00293ADFB9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39C6F54F-9AE2-44E7-809A-00293ADFB9C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03DF7EC-3B70-44FA-917A-252C43BE629E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03DF7EC-3B70-44FA-917A-252C43BE629E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03DF7EC-3B70-44FA-917A-252C43BE629E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03DF7EC-3B70-44FA-917A-252C43BE629E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

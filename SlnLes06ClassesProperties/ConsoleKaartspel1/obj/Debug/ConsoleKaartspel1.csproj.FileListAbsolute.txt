@@ -1,0 +1,7 @@
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\ConsoleKaartspel1.exe.config
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\ConsoleKaartspel1.exe
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\ConsoleKaartspel1.pdb
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\ConsoleKaartspel1.csproj.AssemblyReference.cache
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\ConsoleKaartspel1.csproj.CoreCompileInputs.cache
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\ConsoleKaartspel1.exe
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\ConsoleKaartspel1.pdb

@@ -1,0 +1,7 @@
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleVeiling\bin\Debug\ConsoleVeiling.exe.config
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleVeiling\bin\Debug\ConsoleVeiling.exe
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleVeiling\bin\Debug\ConsoleVeiling.pdb
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleVeiling\obj\Debug\ConsoleVeiling.csproj.AssemblyReference.cache
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleVeiling\obj\Debug\ConsoleVeiling.csproj.CoreCompileInputs.cache
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleVeiling\obj\Debug\ConsoleVeiling.exe
+D:\ooad\-OOAD-afremdilmac-2122\SlnLes06ClassesProperties\ConsoleVeiling\obj\Debug\ConsoleVeiling.pdb

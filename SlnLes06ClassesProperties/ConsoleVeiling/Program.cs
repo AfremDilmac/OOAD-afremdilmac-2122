@@ -11,108 +11,104 @@ namespace ConsoleVeiling
     {
         static void Main(string[] args)
         {
-            List<string> koper1Items = new List<string>(3);
-            List<string> koper2Items = new List<string>(3);
-            List<string> koper3Items = new List<string>(3);
+            //Kopers
+            Koper koperAfrem = new Koper("Afrem");
+            Koper koperOmar = new Koper("Omar");
+            Koper koperGeert = new Koper("Geert");
 
-            Item item1 = new Item("Apple Laptop");
-            Item item2 = new Item("Playstation 5");
-            Item item3 = new Item("Coca cola vanille");
-            Item item4 = new Item("Huawei Laptop");
+            //Items
+            Item item1 = new Item("Apple Laptop", 220);
+            Item item2 = new Item("Playstation 5", 500);
+            Item item3 = new Item("Coca cola vanille", 1);
+            Item item4 = new Item("Huawei Laptop", 300);
 
-            Koper koper1 = new Koper("Afrem");
-            Koper koper2 = new Koper("Hasbulla");
-            Koper koper3 = new Koper("Batman");
+            //Bod
+            item1.AddBod(new Bod(270, item1, koperAfrem));
+            item1.AddBod(new Bod(290, item1, koperOmar));
+            item1.AddBod(new Bod(300, item1, koperGeert));
+            item1.AddBod(new Bod(400, item1, koperAfrem));
+            //item1.AddBod(new Bod(50, item1, koperOmar));
 
-            Bod bod1 = new Bod(400);
-            Bod bod2 = new Bod(450);
-            Bod bod3 = new Bod(500);
-            Bod bod4 = new Bod(4);
-            Bod bod5 = new Bod(700);
-
-            Console.WriteLine($"Item te koop: {item1.Naam}!");
-            Console.WriteLine($"{koper1.Naam} bied {bod1._nummer}");
-
-            Timer();
-            Console.WriteLine($"Proficiat aan {koper1.Naam} voor {item1.Naam}");
-            koper1Items.Add(item1.Naam);
-
-            Console.WriteLine("");
-
-            Console.WriteLine($"Item te koop: {item4.Naam}!");
-            Console.WriteLine($"{koper1.Naam} bied {bod5._nummer}");
-
-            Timer();
-            Console.WriteLine($"Proficiat aan {koper1.Naam} voor {item4.Naam}");
-            koper1Items.Add(item4.Naam);
-
-            Console.WriteLine("");
-
-
-            Console.WriteLine($"Item te koop: {item2.Naam}!");
-          
-            Console.WriteLine($"{koper3.Naam} bied {bod2._nummer}");
-           
-            try
+            //Einde biedingen
+            Bod hoogsteItem1 = item1.HoogsteBod;
+            if (hoogsteItem1 == null)
             {
-                if (bod3._nummer > bod2._nummer)
-                {
-                    Console.WriteLine($"{koper2.Naam} bied {bod3._nummer}");
-                    Timer();
-                    Console.WriteLine($"Proficiat aan {koper2.Naam} voor {item2.Naam}");
-                    koper2Items.Add(item2.Naam);
-                }
-                else
-                {
-                    Console.WriteLine("test" + bod3._nummer);
-                }
+                Console.WriteLine("Nog geen bod");
             }
-            catch (Exception ex)
+            else
             {
-                throw ex;
+               Console.WriteLine($"Hoogste bod is {hoogsteItem1.Prijs}, gedaan door {hoogsteItem1.Koper.Naam}");
+                item1.HoogsteBod.Koper.Items.Add(item1);
             }
 
-            Console.WriteLine("");
-            Console.WriteLine($"Item te koop: {item3.Naam}!");
-            Console.WriteLine($"{koper3.Naam} bied {bod4._nummer}");
-            Timer();
-            koper3Items.Add(item3.Naam);
-            Console.WriteLine($"Proficiat aan {koper3.Naam} voor {item3.Naam}");
-            Console.WriteLine("");
+            //Bod
+            item2.AddBod(new Bod(550, item2, koperAfrem));
+            item2.AddBod(new Bod(600, item2, koperOmar));
+            item2.AddBod(new Bod(620, item2, koperGeert));
+            item2.AddBod(new Bod(800, item2, koperAfrem));
 
-            Console.WriteLine($"{koper1.Naam} Items: ");
-            foreach (string item in koper1Items)
+            //Einde biedingen
+            Bod hoogsteItem2 = item2.HoogsteBod;
+            if (hoogsteItem2 == null)
             {
-                Console.WriteLine(item);
-                Console.WriteLine("");
+                Console.WriteLine("Nog geen bod");
             }
-            Console.WriteLine($"{koper2.Naam} Items: ");
-            foreach (string item in koper2Items)
+            else
             {
-              
-                Console.WriteLine(item);
-                Console.WriteLine("");
-
-            }
-            Console.WriteLine($"{koper3.Naam} Items: ");
-            foreach (string item in koper3Items)
-            {
-                Console.WriteLine(item);
-                Console.WriteLine("");
+                Console.WriteLine($"Hoogste bod is {hoogsteItem2.Prijs}, gedaan door {hoogsteItem2.Koper.Naam}");
+                item2.HoogsteBod.Koper.Items.Add(item2);
             }
 
+            //Bod
+            item3.AddBod(new Bod(5, item3, koperAfrem));
+            item3.AddBod(new Bod(10, item3, koperOmar));
+            item3.AddBod(new Bod(30, item3, koperGeert));
+            item3.AddBod(new Bod(100, item3, koperOmar));
+
+            //Einde biedingen
+            Bod hoogsteItem3 = item3.HoogsteBod;
+            if (hoogsteItem3 == null)
+            {
+                Console.WriteLine("Nog geen bod");
+            }
+            else
+            {
+                Console.WriteLine($"Hoogste bod is {hoogsteItem3.Prijs}, gedaan door {hoogsteItem3.Koper.Naam}");
+                item3.HoogsteBod.Koper.Items.Add(item3);
+            }
+
+            //Bod
+            item4.AddBod(new Bod(550, item4, koperAfrem));
+            item4.AddBod(new Bod(600, item4, koperOmar));
+            item4.AddBod(new Bod(620, item4, koperGeert));
+            item4.AddBod(new Bod(800, item4, koperAfrem));
+            item4.AddBod(new Bod(1000, item4, koperGeert));
+
+            //Einde biedingen
+            Bod hoogsteItem4 = item4.HoogsteBod;
+            if (hoogsteItem4 == null)
+            {
+                Console.WriteLine("Nog geen bod");
+            }
+            else
+            {
+                Console.WriteLine($"Hoogste bod is {hoogsteItem4.Prijs}, gedaan door {hoogsteItem4.Koper.Naam}");
+                item4.HoogsteBod.Koper.Items.Add(item4);
+            }
+
+            foreach (Item item in koperAfrem.Items)
+            {
+                Console.WriteLine($"{item.HoogsteBod.Koper.Naam}: {item.Naam} - {item.HoogsteBod.Prijs}");
+            }
+            foreach (Item item in koperGeert.Items)
+            {
+                Console.WriteLine($"{item.HoogsteBod.Koper.Naam}: {item.Naam} - {item.HoogsteBod.Prijs}");
+            }
+            foreach (Item item in koperOmar.Items)
+            {
+                Console.WriteLine($"{item.HoogsteBod.Koper.Naam}: {item.Naam} - {item.HoogsteBod.Prijs}");
+            }
             Console.ReadLine();
-        }
-
-        public static void Timer() {
-            Console.WriteLine("Timer start:");
-            for (int i = 1; i < 4; i++)
-            {
-                Console.WriteLine("Tot drie tellen: " + i);
-                Thread.Sleep(2000);
-            }
-            Console.WriteLine("Sold!");
-        }
-       
+        } 
     }
 }

@@ -8,11 +8,16 @@ namespace ConsoleVeiling
 {
     class Bod
     {
-        public int _nummer;
+        public decimal Prijs { get; set; }
+        public Koper Koper { get; set; }
+        public Item Item { get; set; }
 
-        public Bod(int nummer)
+
+        public Bod(decimal prijs, Item item, Koper koper)
         {
-            _nummer = nummer;
+            Prijs = prijs;
+            Item = item;
+            Koper = koper;
         }
 
     }

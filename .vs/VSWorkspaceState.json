@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SlnLes02ObjectenStrings\\WpfEllipsen",
     "\\SlnLes06ClassesProperties",
-    "\\SlnLes06ClassesProperties\\ConsoleKaartspel1"
+    "\\SlnLes06ClassesProperties\\ConsoleKaartspel1",
+    "\\SlnLes06ClassesProperties\\ConsoleVeiling"
   ],
-  "SelectedNode": "\\SlnLes06ClassesProperties\\ConsoleKaartspel1\\Program.cs",
+  "SelectedNode": "\\SlnLes06ClassesProperties\\ConsoleVeiling\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

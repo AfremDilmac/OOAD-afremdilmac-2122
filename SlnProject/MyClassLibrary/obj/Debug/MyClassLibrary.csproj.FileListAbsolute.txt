@@ -1,0 +1,7 @@
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\MyClassLibrary\bin\Debug\MyClassLibrary.pdb
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\MyClassLibrary\obj\Debug\MyClassLibrary.csproj.AssemblyReference.cache
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\MyClassLibrary\obj\Debug\MyClassLibrary.csproj.CoreCompileInputs.cache
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\MyClassLibrary\obj\Debug\MyClassLibrary.dll
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\MyClassLibrary\bin\Debug\MyClassLibrary.dll.config

@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfAdmin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAdmin"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0"/>
+        <Grid DockPanel.Dock="Right" Width="250" Margin="20,10" Background="#FFFCFAFA">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Email" FontWeight="Bold" />
+            <Label Grid.Column="1" x:Name="lblEmail" />
+            <Label Grid.Row="1" Content="Geslacht" FontWeight="Bold" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="lblGender" />
+            <Label Grid.Row="2" Content="Geb.datum" FontWeight="Bold" />
+            <Label Grid.Row="2" Grid.Column="1" x:Name="lblBirthdate" />
+            <Label Grid.Row="3" Content="Toeg.code" FontWeight="Bold" />
+            <Label Grid.Row="3" Grid.Column="1" x:Name="lblCode" />
+        </Grid>
+        <ListBox x:Name="lbxResults" Margin="20,10,0,10" SelectionChanged="LbxResults_SelectionChanged"/>
+    </DockPanel>
+</Window>

@@ -17,26 +17,16 @@ using System.Windows.Shapes;
 namespace WpfAdmin
 {
     /// <summary>
-    /// Logique d'interaction pour EditUser.xaml
+    /// Logique d'interaction pour CreateUser.xaml
     /// </summary>
-    public partial class EditUser : Page
+    public partial class CreateUser : Page
     {
         User user = new User();
         MainWindow md = new MainWindow();
-        int userid;
-        public EditUser(MainWindow dashboard, int id)
+        public CreateUser(MainWindow dashboard)
         {
             InitializeComponent();
-            this.md = dashboard;
-            userid = id;
-            user = User.FindById(userid);
-            txtLogin.Text = user.Login;
-            txtPassword.Text = user.Password;
-            txtFirstName.Text = user.FirstName;
-            txtLastName.Text = user.LastName;
-            txtRole.Text = user.Role;
-            md.ReloadUsers(null);
-           
+            md = dashboard;
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -45,9 +35,16 @@ namespace WpfAdmin
             user.Password = txtPassword.Text;
             user.FirstName = txtFirstName.Text;
             user.LastName = txtLastName.Text;
-            user.Role = txtRole.Text;
-            user.UpdateUser();
-           
+            if (cbxRole.SelectedIndex == 0)
+            {
+                user.Role = "user";
+            }
+            else
+            {
+                user.Role = "admin";
+            }
+            user.Id = Convert.ToInt32(txtId.Text);
+            user.InsertToDb();
         }
     }
 }

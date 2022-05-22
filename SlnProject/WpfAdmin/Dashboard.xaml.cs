@@ -75,6 +75,7 @@ namespace WpfAdmin
             ListBoxItem item = (ListBoxItem)lbxResults.SelectedItem;
             int userId = Convert.ToInt32(item.Tag);
             frmShow.Content = new EditUser(this, userId);
+            ReloadUsers(null);
         }
 
         private void BtnRemove_Click(object sender, RoutedEventArgs e)
@@ -91,7 +92,21 @@ namespace WpfAdmin
 
         private void BtnNew_Click(object sender, RoutedEventArgs e)
         {
+            
+            frmShow.Content = new CreateUser(this);
+            ReloadUsers(null);
 
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (frmShow.CanGoBack) frmShow.NavigationService.GoBack();
+            ReloadUsers(null);
+        }
+
+        private void BtnReload_Click(object sender, RoutedEventArgs e)
+        {
+            ReloadUsers(null);
         }
     }
 }

@@ -21,3 +21,5 @@ D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\Login.g.cs
 D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\Login.baml
 D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\EditUser.g.cs
 D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\EditUser.baml
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\CreateUser.g.cs
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\CreateUser.baml

@@ -8,9 +8,11 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel LastChildFill="True" Background="#FF2B6777">
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+            <Button x:Name="btnReload" Content="Reload" Margin="10,0,10,10" Padding="10,5" Click="BtnReload_Click" Background="#FFC8D8E4" FontWeight="Bold" FontFamily="Segoe UI"/>
             <Button x:Name="btnEdit" Content="bewerk" Margin="10,0,10,10" IsEnabled="False" Padding="10,5" Click="BtnEdit_Click" Background="#FFC8D8E4" FontWeight="Bold" FontFamily="Segoe UI"/>
             <Button x:Name="btnRemove" Content="verwijder" Margin="10,0,10,10" IsEnabled="False" Padding="10,5" Click="BtnRemove_Click" Background="#FFC8D8E4" FontWeight="Bold"/>
             <Button x:Name="btnNew" Content="nieuw..." Margin="10,0,10,10" Padding="10,5" Click="BtnNew_Click" Background="#FFC8D8E4" FontWeight="Bold"/>
+            <Button x:Name="btnBack" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="37" Click="btnBack_Click" Height="29" />
         </StackPanel>
         <Grid DockPanel.Dock="Right" Width="250" Margin="20,102,20,67" Background="#FF52AB98">
             <Grid.ColumnDefinitions>
@@ -41,7 +43,7 @@
             <Label Grid.Row="6" Content="Password" FontWeight="Bold" />
             <Label Grid.Row="6" Grid.Column="1" x:Name="lblPassword" />
         </Grid>
+        <Frame  NavigationUIVisibility="Hidden" x:Name="frmShow" Content="" Grid.ColumnSpan="2" Grid.RowSpan="6" />
         <ListBox x:Name="lbxResults" Margin="20,10,0,10" SelectionChanged="LbxResults_SelectionChanged" Background="#FFC8D8E4"/>
-        <Frame x:Name="frmShow" Content="" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="540" Grid.Column="0" Grid.ColumnSpan="2" />
     </DockPanel>
 </Window>

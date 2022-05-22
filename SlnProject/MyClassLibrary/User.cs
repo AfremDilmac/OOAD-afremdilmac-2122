@@ -47,6 +47,36 @@ namespace MyClassLibrary
             return users;
         }
 
+        public static List<User> GetAllClients()
+        {
+            List<User> users = new List<User>();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                // open connectie
+                conn.Open();
+
+                // voer SQL commando uit
+                SqlCommand comm = new SqlCommand("SELECT * FROM [User] WHERE role=@user", conn);
+                comm.Parameters.AddWithValue("@user", "user");
+                SqlDataReader reader = comm.ExecuteReader();
+
+                // lees en verwerk resultaten
+
+                while (reader.Read())
+                {
+                    int id = Convert.ToInt32(reader["id"]);
+                    string Login = Convert.ToString(reader["login"]);
+                    string Password = Convert.ToString(reader["password"]);
+                    string FirstName = Convert.ToString(reader["firstname"]);
+                    string LastName = Convert.ToString(reader["lastname"]);
+                    DateTime? CreateDate = reader["createdate"] == DBNull.Value ? null : (DateTime?)Convert.ToDateTime(reader["createdate"]);
+                    string Role = Convert.ToString(reader["role"]);
+                    users.Add(new User(id, Login, Password, FirstName, LastName, Role, CreateDate));
+                }
+            }
+            return users;
+        }
+
         public static User FindById(int empId)
         {
             using (SqlConnection conn = new SqlConnection(connString))
@@ -71,7 +101,7 @@ namespace MyClassLibrary
             }
         }
 
-        public static bool LoginInDb(string cp, string ps)
+        public static bool LoginInDbUser(string cp, string ps)
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -91,6 +121,56 @@ namespace MyClassLibrary
                 }
             }
         }
+
+        public static bool LoginInDbAdmin(string cp, string ps)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comn = new SqlCommand("SELECT login, password FROM [User] WHERE login=@par1 AND password=@par2 AND role=@user", conn);
+                comn.Parameters.AddWithValue("@par1", cp);
+                comn.Parameters.AddWithValue("@par2", ps);
+                comn.Parameters.AddWithValue("@user", "admin");
+                SqlDataReader reader = comn.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public void DeleteFromDb()
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("DELETE FROM [User] WHERE ID = @par1", conn);
+                comm.Parameters.AddWithValue("@par1", Id);
+                comm.ExecuteNonQuery();
+            }
+        }
+
+        public void UpdateUser()
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand(@"UPDATE [User] SET login=@parA, password=@parB, firstname=@parC, lastname=@parD, role=@parE WHERE id = @parID", conn);
+                comm.Parameters.AddWithValue("@parA", Login);
+                comm.Parameters.AddWithValue("@parB", Password);
+                comm.Parameters.AddWithValue("@parC", FirstName);
+                comm.Parameters.AddWithValue("@parD", LastName);
+                comm.Parameters.AddWithValue("@parE", Role);
+                comm.Parameters.AddWithValue("@parID", Id);
+                comm.ExecuteNonQuery();
+            }
+        }
+
 
         public User()
         { 

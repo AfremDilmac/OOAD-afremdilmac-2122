@@ -27,7 +27,7 @@ namespace WpfAdmin
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (User.LoginInDb(tbxUsername.Text, tbxPassword.Password))
+            if (User.LoginInDbAdmin(tbxUsername.Text, tbxPassword.Password))
             {
                 MainWindow venster = new MainWindow();
                 this.Close();

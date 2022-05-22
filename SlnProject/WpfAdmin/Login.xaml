@@ -13,9 +13,9 @@
         </Grid.RowDefinitions>
         <StackPanel x:Name="tbxPasswoord"  Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0">
             <TextBlock Text="Username:" FontSize="16" FontFamily="Segoe UI Semibold" Foreground="White"></TextBlock>
-            <TextBox x:Name="tbxUsername"  HorizontalAlignment="Left" Margin="0,0,0,10" Grid.Row="1" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="tbxUsername"  HorizontalAlignment="Left" Margin="0,0,0,10" Grid.Row="1" Text="admin" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <TextBlock Text="Password:" FontSize="16" FontFamily="Segoe UI Semibold" Foreground="White"></TextBlock>
-            <PasswordBox x:Name="tbxPassword" HorizontalAlignment="Left" Margin="0,0,0,20" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+            <PasswordBox x:Name="tbxPassword" HorizontalAlignment="Left" Margin="0,0,0,20" Grid.Row="1" VerticalAlignment="Top" Width="120" Password="admin"/>
             <Button x:Name="btnLogin" FontFamily="Segoe UI Semibold" Content="Login" Height="29" Width="120" FontSize="14" Click="btnLogin_Click"></Button>
         </StackPanel>
         <Image HorizontalAlignment="Center" Height="100"  Width="148" VerticalAlignment="Center" Source="logo.jpg"/>

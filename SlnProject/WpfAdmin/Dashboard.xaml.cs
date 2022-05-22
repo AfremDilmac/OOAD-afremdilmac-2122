@@ -26,19 +26,22 @@ namespace WpfAdmin
         public MainWindow()
         {
             InitializeComponent();
-            ReloadEmployees(null);
+            ReloadUsers(null);
         }
-        public void ReloadEmployees(int? selectedId)
+        public void ReloadUsers(int? selectedId)
         {
             // wis lijst en labels
             lbxResults.Items.Clear();
-            lblEmail.Content = "";
-            lblGender.Content = "";
-            lblBirthdate.Content = "";
-            lblCode.Content = "";
+            lblId.Content = "";
+            lblFirstName.Content = "";
+            lblLastName.Content = "";
+            lblDate.Content = "";
+            lblRole.Content = "";
+            lblLogin.Content = "";
+            lblPassword.Content = "";
 
             // laad alle werknemers in
-            List<User> allEmps = User.GetAll();
+            List<User> allEmps = User.GetAllClients();
             foreach (User emp in allEmps)
             {
                 ListBoxItem item = new ListBoxItem();
@@ -49,32 +52,46 @@ namespace WpfAdmin
             }
         }
 
-        //private void btnLogin_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (User.LoginInDb(txtLogin.Text, txtPaswoord.Password) == true)
-        //    {
-        //        lblError.Content = "User bestaat";
-        //    }
-        //    else {
-        //        lblError.Content = "De ID en/of paswoord is niet correct";
-        //    }
-
-        //}
-
         private void LbxResults_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // stel button states in
+            ListBoxItem item = (ListBoxItem)lbxResults.SelectedItem;
+            btnEdit.IsEnabled = item != null;
+            btnRemove.IsEnabled = item != null;
+            if (item == null) return;
+          
+            int userId = Convert.ToInt32(item.Tag);
+            User user = User.FindById(userId);
+            lblId.Content = user.Id;
+            lblFirstName.Content = user.FirstName;
+            lblLastName.Content = user.LastName;
+            lblDate.Content = user.CreateDate;
+            lblRole.Content = user.Role;
+            lblLogin.Content = user.Login;
+            lblPassword.Content = user.Password;
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem item = (ListBoxItem)lbxResults.SelectedItem;
+            int userId = Convert.ToInt32(item.Tag);
+            frmShow.Content = new EditUser(this, userId);
+        }
+
+        private void BtnRemove_Click(object sender, RoutedEventArgs e)
+        {
             ListBoxItem item = (ListBoxItem)lbxResults.SelectedItem;
             if (item == null) return;
+            int userId = Convert.ToInt32(item.Tag);
+            User user = User.FindById(userId);
+            MessageBoxResult result = MessageBox.Show($"Do you want to delete this user: {user.FirstName}", "Delete", MessageBoxButton.YesNo);
+            if (result != MessageBoxResult.Yes) return;
+            user.DeleteFromDb();
+            ReloadUsers(null);
+        }
 
-            // als een werknemer geselecteerd is, vraag details op
-            int employeeId = Convert.ToInt32(item.Tag);
-            User emp = User.FindById(employeeId);
-            lblEmail.Content = emp.FirstName;
-            string gender = emp.LastName;
-            lblGender.Content = gender;
-            lblBirthdate.Content = emp.Role;
-            lblCode.Content = emp.Password;
+        private void BtnNew_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -6,9 +6,13 @@
         xmlns:local="clr-namespace:WpfAdmin"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel LastChildFill="True">
-        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0"/>
-        <Grid DockPanel.Dock="Right" Width="250" Margin="20,10" Background="#FFFCFAFA">
+    <DockPanel LastChildFill="True" Background="#FF2B6777">
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+            <Button x:Name="btnEdit" Content="bewerk" Margin="10,0,10,10" IsEnabled="False" Padding="10,5" Click="BtnEdit_Click" Background="#FFC8D8E4" FontWeight="Bold" FontFamily="Segoe UI"/>
+            <Button x:Name="btnRemove" Content="verwijder" Margin="10,0,10,10" IsEnabled="False" Padding="10,5" Click="BtnRemove_Click" Background="#FFC8D8E4" FontWeight="Bold"/>
+            <Button x:Name="btnNew" Content="nieuw..." Margin="10,0,10,10" Padding="10,5" Click="BtnNew_Click" Background="#FFC8D8E4" FontWeight="Bold"/>
+        </StackPanel>
+        <Grid DockPanel.Dock="Right" Width="250" Margin="20,102,20,67" Background="#FF52AB98">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="*" />
@@ -19,17 +23,25 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
-            <Label Content="Email" FontWeight="Bold" />
-            <Label Grid.Column="1" x:Name="lblEmail" />
-            <Label Grid.Row="1" Content="Geslacht" FontWeight="Bold" />
-            <Label Grid.Row="1" Grid.Column="1" x:Name="lblGender" />
-            <Label Grid.Row="2" Content="Geb.datum" FontWeight="Bold" />
-            <Label Grid.Row="2" Grid.Column="1" x:Name="lblBirthdate" />
-            <Label Grid.Row="3" Content="Toeg.code" FontWeight="Bold" />
-            <Label Grid.Row="3" Grid.Column="1" x:Name="lblCode" />
+            <Label Content="User ID" FontWeight="Bold" />
+            <Label Grid.Column="1" x:Name="lblId" />
+            <Label Grid.Row="1" Content="Firstname" FontWeight="Bold" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="lblFirstName" />
+            <Label Grid.Row="2" Content="Lastname" FontWeight="Bold" />
+            <Label Grid.Row="2" Grid.Column="1" x:Name="lblLastName" />
+            <Label Grid.Row="3" Content="Account created" FontWeight="Bold" />
+            <Label Grid.Row="3" Grid.Column="1" x:Name="lblDate" />
+            <Label Grid.Row="4" Content="Role" FontWeight="Bold" />
+            <Label Grid.Row="4" Grid.Column="1" x:Name="lblRole" />
+            <Label Grid.Row="5" Content="Login" FontWeight="Bold" />
+            <Label Grid.Row="5" Grid.Column="1" x:Name="lblLogin" />
+            <Label Grid.Row="6" Content="Password" FontWeight="Bold" />
+            <Label Grid.Row="6" Grid.Column="1" x:Name="lblPassword" />
         </Grid>
-        <ListBox x:Name="lbxResults" Margin="20,10,0,10" SelectionChanged="LbxResults_SelectionChanged"/>
+        <ListBox x:Name="lbxResults" Margin="20,10,0,10" SelectionChanged="LbxResults_SelectionChanged" Background="#FFC8D8E4"/>
+        <Frame x:Name="frmShow" Content="" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="540" Grid.Column="0" Grid.ColumnSpan="2" />
     </DockPanel>
 </Window>

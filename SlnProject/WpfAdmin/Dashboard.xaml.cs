@@ -56,7 +56,9 @@ namespace WpfAdmin
         {
             ListBoxItem item = (ListBoxItem)lbxResults.SelectedItem;
             btnEdit.IsEnabled = item != null;
+            btnHuisdieren.IsEnabled = item != null;
             btnRemove.IsEnabled = item != null;
+            btnVerblijfById.IsEnabled = item != null;
             if (item == null) return;
           
             int userId = Convert.ToInt32(item.Tag);
@@ -107,6 +109,33 @@ namespace WpfAdmin
         private void BtnReload_Click(object sender, RoutedEventArgs e)
         {
             ReloadUsers(null);
+        }
+
+        private void BtnAlleHuisdieren_Click(object sender, RoutedEventArgs e)
+        {
+            frmShow.Content = new Huisdieren(this);
+        }
+
+        private void BtnHuisdierById(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem item = (ListBoxItem)lbxResults.SelectedItem;
+            int userId = Convert.ToInt32(item.Tag);
+            frmShow.Content = new HuisdierById(this, userId);
+        }
+
+        private void BtnAlleVerblijven_Click(object sender, RoutedEventArgs e)
+        {
+            frmShow.Content = new Verblijven(this);
+        }
+
+        private void BtnVerblijfById_Click(object sender, RoutedEventArgs e)
+        {
+            //frmShow.Content = new VerblijfById(this);
+        }
+
+        private void BtnAlleVerblijven_Click_1(object sender, RoutedEventArgs e)
+        {
+            frmShow.Content = new Verblijven(this);
         }
     }
 }

@@ -23,3 +23,9 @@ D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\EditUser.g.cs
 D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\EditUser.baml
 D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\CreateUser.g.cs
 D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\CreateUser.baml
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\Huisdieren.g.cs
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\Huisdieren.baml
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\HuisdierById.g.cs
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\HuisdierById.baml
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\Verblijven.g.cs
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfAdmin\obj\Debug\Verblijven.baml

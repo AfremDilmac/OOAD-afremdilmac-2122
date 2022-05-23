@@ -62,8 +62,17 @@
     <Compile Include="EditUser.xaml.cs">
       <DependentUpon>EditUser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HuisdierById.xaml.cs">
+      <DependentUpon>HuisdierById.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Huisdieren.xaml.cs">
+      <DependentUpon>Huisdieren.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Verblijven.xaml.cs">
+      <DependentUpon>Verblijven.xaml</DependentUpon>
     </Compile>
     <Page Include="CreateUser.xaml">
       <SubType>Designer</SubType>
@@ -85,7 +94,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="HuisdierById.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Huisdieren.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Verblijven.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

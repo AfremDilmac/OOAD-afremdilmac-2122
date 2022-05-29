@@ -18,6 +18,7 @@ namespace MyClassLibrary
         public string Remarks { get; set; }
         public int PackageId { get; set; }
         public int PetId { get; set; }
+        public int Status { get; set; }
 
         public static List<Residency> GetAll()
         {
@@ -41,7 +42,8 @@ namespace MyClassLibrary
                     string Remarks = Convert.ToString(reader["remarks"]);
                     int PackageId = Convert.ToInt32(reader["package_id"]);
                     int PetId = Convert.ToInt32(reader["pet_id"]);
-                    users.Add(new Residency(id, StartDate, EndDate, Remarks, PackageId, PetId));
+                    int Status = Convert.ToInt32(reader["status"]);
+                    users.Add(new Residency(id, StartDate, EndDate, Remarks, PackageId, PetId, Status));
                 }
             }
             return users;
@@ -54,7 +56,7 @@ namespace MyClassLibrary
                 conn.Open();
 
                 // voer SQL commando uit
-                SqlCommand comm = new SqlCommand("SELECT startdate, enddate, remarks, package_id, pet_id FROM [Residency] WHERE ID = @parID", conn);
+                SqlCommand comm = new SqlCommand("SELECT startdate, enddate, remarks, package_id, pet_id, status FROM [Residency] WHERE ID = @parID", conn);
                 comm.Parameters.AddWithValue("@parID", empId);
                 SqlDataReader reader = comm.ExecuteReader();
 
@@ -65,10 +67,29 @@ namespace MyClassLibrary
                 string Remarks = Convert.ToString(reader["remarks"]);
                 int PackageId = Convert.ToInt32(reader["package_id"]);
                 int PetId = Convert.ToInt32(reader["pet_id"]);
-                return new Residency(empId, StartDate, EndDate, Remarks, PackageId, PetId);
+                int Status = Convert.ToInt32(reader["status"]);
+                return new Residency(empId, StartDate, EndDate, Remarks, PackageId, PetId, Status);
             }
         }
-        public Residency(int id, DateTime? startDate, DateTime? endDate, string remarks, int packageId, int petId)
+        public int InsertToDb()
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand(
+                  "INSERT INTO [Residency](id,startdate,enddate,remarks,package_id,pet_id,status) output INSERTED.ID VALUES(@par1,@par2,@par3,@par4,@par5,@par6,@par7)", conn);
+                comm.Parameters.AddWithValue("@par1", Id);
+                comm.Parameters.AddWithValue("@par2", Startdate);
+                comm.Parameters.AddWithValue("@par3", EndDate);
+                comm.Parameters.AddWithValue("@par4", Remarks);
+                comm.Parameters.AddWithValue("@par5", PackageId);
+                comm.Parameters.AddWithValue("@par6", PetId);
+                comm.Parameters.AddWithValue("@par7", Status);
+
+                return (int)comm.ExecuteScalar();
+            }
+        }
+        public Residency(int id, DateTime? startDate, DateTime? endDate, string remarks, int packageId, int petId, int status)
         {
             Id = id;
             Startdate = startDate;
@@ -76,6 +97,7 @@ namespace MyClassLibrary
             Remarks = remarks;
             PackageId = packageId;
             PetId = petId;
+            Status = status;
         }
 
         public Residency()
@@ -83,7 +105,7 @@ namespace MyClassLibrary
         }
         public override string ToString()
         {
-            return $"{Id}: {Startdate}";
+            return $"{Id}: {Startdate} {Status}";
         }
     }
 }

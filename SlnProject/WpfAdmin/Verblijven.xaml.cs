@@ -37,6 +37,7 @@ namespace WpfAdmin
             lblPetId.Content = "";
             lblPackageId.Content = "";
             lblRemarks.Content = "";
+            lblStatus.Content = "";
             
 
             List<Residency> allEmps = Residency.GetAll();
@@ -62,6 +63,7 @@ namespace WpfAdmin
             lblPetId.Content = residency.PetId;
             lblPackageId.Content = residency.PackageId;
             lblRemarks.Content = residency.Remarks;
+            lblStatus.Content = residency.Status;
             
         }
     }

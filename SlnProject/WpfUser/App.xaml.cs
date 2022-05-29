@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WpfGebruiker
+namespace WpfUser
 {
     /// <summary>
     /// Logique d'interaction pour App.xaml

@@ -17,3 +17,4 @@ D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfGebruiker\obj\Debug\WpfGebruiker.cs
 D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfGebruiker\obj\Debug\WpfGebruiker.csproj.CopyComplete
 D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfGebruiker\obj\Debug\WpfGebruiker.exe
 D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfGebruiker\obj\Debug\WpfGebruiker.pdb
+D:\ooad\-OOAD-afremdilmac-2122\SlnProject\WpfGebruiker\obj\Debug\Dashboard.g.cs

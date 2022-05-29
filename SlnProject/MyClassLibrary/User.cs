@@ -144,6 +144,26 @@ namespace MyClassLibrary
             }
         }
 
+        public static User GetId(string name)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                // open connectie
+                conn.Open();
+
+                // voer SQL commando uit
+                SqlCommand comm = new SqlCommand("SELECT id FROM [User] WHERE login = @Par1", conn);
+                comm.Parameters.AddWithValue("@Par1", name);
+                SqlDataReader reader = comm.ExecuteReader();
+
+                // lees en verwerk resultaten
+                if (!reader.Read()) return null;
+                
+                int Id = Convert.ToInt32(reader["id"]);
+                return new User(Id);
+            }
+        }
+
         public void DeleteFromDb()
         {
             using (SqlConnection conn = new SqlConnection(connString))
@@ -192,6 +212,10 @@ namespace MyClassLibrary
 
         public User()
         { 
+        }
+        public User(int id)
+        {
+            Id = id;
         }
 
         public User(int id, string login, string password, string firstname, string lastname, string role, DateTime? cd)

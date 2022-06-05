@@ -78,6 +78,8 @@ namespace MyClassLibrary
             return users;
         }
 
+      
+
         public static Pet FindById(int empId)
         {
             using (SqlConnection conn = new SqlConnection(connString))
@@ -133,7 +135,7 @@ namespace MyClassLibrary
 
         public override string ToString()
         {
-            return $"{Id}: {Name} {TypeName} {UserId}";
+            return $"{TypeName}";
         }
     }
 }

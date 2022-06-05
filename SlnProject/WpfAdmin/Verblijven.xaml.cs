@@ -31,13 +31,13 @@ namespace WpfAdmin
         }
         public void ReloadUsers(int? selectedId)
         {
-            lblResidencyId.Content = "";
-            lblEndDate.Content = "";
-            lblStartDate.Content = "";
-            lblPetId.Content = "";
-            lblPackageId.Content = "";
-            lblRemarks.Content = "";
-            lblStatus.Content = "";
+            lblResidencyId.Text = "";
+            lblEndDate.Text = "";
+            lblStartDate.Text = "";
+            lblPetId.Text = "";
+            lblPackageId.Text = "";
+            lblRemarks.Text = "";
+            lblStatus.Text = "";
             
 
             List<Residency> allEmps = Residency.GetAll();
@@ -57,14 +57,31 @@ namespace WpfAdmin
             if (item == null) return;
             int userId = Convert.ToInt32(item.Tag);
             Residency residency = Residency.FindById(userId);
-            lblResidencyId.Content = residency.Id;
-            lblEndDate.Content = residency.EndDate;
-            lblStartDate.Content = residency.Startdate;
-            lblPetId.Content = residency.PetId;
-            lblPackageId.Content = residency.PackageId;
-            lblRemarks.Content = residency.Remarks;
-            lblStatus.Content = residency.Status;
+            lblResidencyId.Text = Convert.ToString(residency.Id);
+            lblEndDate.Text = Convert.ToString(residency.EndDate);
+            lblStartDate.Text = Convert.ToString(residency.Startdate);
+            lblPetId.Text = Convert.ToString(residency.PetId);
+            lblPackageId.Text = Convert.ToString(residency.PackageId);
+            lblRemarks.Text = Convert.ToString(residency.Remarks);
+            lblStatus.Text = Convert.ToString(residency.Status);
             
+        }
+
+        private void lblStatus_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnUpdateStatus_Click(object sender, RoutedEventArgs e)
+        {
+            verblijven.Id = Convert.ToInt32(lblResidencyId.Text);
+            verblijven.Startdate = Convert.ToDateTime(lblStartDate.Text);
+            verblijven.EndDate = Convert.ToDateTime(lblEndDate.Text);
+            verblijven.Remarks = lblRemarks.Text;
+            verblijven.PackageId = Convert.ToInt32(lblPackageId.Text);
+            verblijven.PetId = Convert.ToInt32(lblPetId.Text);
+            verblijven.Status = Convert.ToInt32(lblStatus.Text);
+            verblijven.Update();
         }
     }
 }

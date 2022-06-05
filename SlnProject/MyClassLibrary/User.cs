@@ -191,21 +191,19 @@ namespace MyClassLibrary
             }
         }
 
-        public int InsertToDb()
+        public void InsertToDb()
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
                 SqlCommand comm = new SqlCommand(
-                  "INSERT INTO [User](id,login,password,firstname,lastname,role) output INSERTED.ID VALUES(@par1,@par2,@par3,@par4,@par5,@par6)", conn);
-                comm.Parameters.AddWithValue("@par1", Id);
-                comm.Parameters.AddWithValue("@par2", Login);
-                comm.Parameters.AddWithValue("@par3", Password);
-                comm.Parameters.AddWithValue("@par4", FirstName);
-                comm.Parameters.AddWithValue("@par5", LastName);
-                comm.Parameters.AddWithValue("@par6", Role);
-               
-                return (int)comm.ExecuteScalar();
+                  "INSERT INTO [User](login,password,firstname,lastname,role) output INSERTED.ID VALUES(@par1,@par2,@par3,@par4,@par5)", conn);
+                comm.Parameters.AddWithValue("@par1", Login);
+                comm.Parameters.AddWithValue("@par2", Password);
+                comm.Parameters.AddWithValue("@par3", FirstName);
+                comm.Parameters.AddWithValue("@par4", LastName);
+                comm.Parameters.AddWithValue("@par5", Role);
+                comm.ExecuteNonQuery();
             }
         }
 

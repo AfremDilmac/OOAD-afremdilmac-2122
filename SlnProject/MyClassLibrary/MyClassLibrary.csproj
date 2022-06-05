@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Option.cs" />
+    <Compile Include="Package.cs" />
     <Compile Include="Residency.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Pet.cs" />

@@ -24,19 +24,20 @@
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
             <Label Content="Residency ID&#xD;&#xA;" FontWeight="Bold" />
-            <Label Grid.Column="1" x:Name="lblResidencyId" />
+            <TextBox Grid.Column="1" x:Name="lblResidencyId" />
             <Label Grid.Row="1" Content="StartDate" FontWeight="Bold" />
-            <Label Grid.Row="1" Grid.Column="1" x:Name="lblStartDate" />
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="lblStartDate" />
             <Label Grid.Row="2" Content="EndDate" FontWeight="Bold" />
-            <Label Grid.Row="2" Grid.Column="1" x:Name="lblEndDate" />
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="lblEndDate" />
             <Label Grid.Row="3" Content="Remarks" FontWeight="Bold" />
-            <Label Grid.Row="3" Grid.Column="1" x:Name="lblRemarks" />
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="lblRemarks" />
             <Label Grid.Row="4" Content="PackageId" FontWeight="Bold" />
-            <Label Grid.Row="4" Grid.Column="1" x:Name="lblPackageId" />
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="lblPackageId" />
             <Label Grid.Row="5" Content="PetId" FontWeight="Bold" />
-            <Label Grid.Row="5" x:Name="lblPetId" Grid.Column="1" Content="" FontWeight="Bold" />
+            <TextBox Grid.Row="5" x:Name="lblPetId" Grid.Column="1" Text="" FontWeight="Bold" />
             <Label Grid.Row="6" Content="Status" FontWeight="Bold" />
-            <Label Grid.Row="6" x:Name="lblStatus" Grid.Column="1" Content="" FontWeight="Bold" />
+            <TextBox x:Name="lblStatus" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="5,8,0,0" Grid.Row="6" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="lblStatus_TextChanged"/>
+            <Button x:Name="btnUpdateStatus" Content="Update" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="24,54,0,-47" Grid.Row="6" VerticalAlignment="Top" Width="74" Click="btnUpdateStatus_Click"/>
 
 
         </Grid>

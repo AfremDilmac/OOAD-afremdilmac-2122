@@ -7,8 +7,10 @@
     "\\SlnLes07StaticEnum",
     "\\SlnLes08Overerving",
     "\\SlnProject",
-    "\\SlnProject\\WpfAdmin"
+    "\\SlnProject\\WpfAdmin",
+    "\\SlnProject\\WpfGebruiker",
+    "\\SlnProject\\WpfUser"
   ],
-  "SelectedNode": "\\SlnProject\\WpfAdmin\\CreateUser.xaml",
+  "SelectedNode": "\\SlnProject\\WpfUser\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

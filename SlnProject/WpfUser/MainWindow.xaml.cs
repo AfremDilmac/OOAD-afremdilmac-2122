@@ -25,21 +25,18 @@ namespace WpfUser
         {
             InitializeComponent();
             ReloadResidency(null, userid);
+            btnNew.IsEnabled = false;
         }
         private void LbxResidency_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ListBoxItem item = (ListBoxItem)lbxResidency.SelectedItem;
-            if (item == null) return;
-            int userId = Convert.ToInt32(item.Tag);
-            Residency residency = Residency.FindById(userId);
-            lblEndDate.Content = residency.EndDate;
-            lblStartDate.Content = residency.Startdate;
-            lblPetRemarks.Content = residency.Remarks;
-
+          
         }
 
         private void LbxPet_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            lbxResidency.Items.Clear();
+
+            btnNew.IsEnabled = true;
             ListBoxItem item = (ListBoxItem)lbxPet.SelectedItem;
             if (item == null) return;
             int userId = Convert.ToInt32(item.Tag);
@@ -49,6 +46,18 @@ namespace WpfUser
             lblSex.Content = pet.Sex;
             lblSize.Content = pet.Size;
             lblAge.Content = pet.Age;
+
+            List<Residency> allResidency = Residency.GetAllResidence(userId);
+            foreach (Residency Residence in allResidency)
+            {
+                ListBoxItem item2 = new ListBoxItem();
+                item2.Content = Residence.ToString();
+                if (Residence.PetId == pet.Id)
+                {
+                    lbxResidency.Items.Add(item2);
+                }
+            }
+
         }
 
         public void ReloadResidency(int? selectedId, int userid) 
@@ -66,28 +75,25 @@ namespace WpfUser
                 }
             }
 
-            List<Residency> allResidency = Residency.GetAll();
-            foreach (Residency Residence in allResidency)
-            {
-                ListBoxItem item2 = new ListBoxItem();
-                item2.Content = Residence.ToString();
-                item2.Tag = Residence.Id;
-                item2.IsSelected = selectedId == Residence.Id;
-                if (Residence.Id == userid)
-                {
-                    lbxResidency.Items.Add(item2);
-                }
-            }
+            
         }
 
         private void BtnNew_Click(object sender, RoutedEventArgs e)
         {
-            frmShow.Content = new AanvraagResidency(this);
+            ListBoxItem item = (ListBoxItem)lbxPet.SelectedItem;
+            int id = Convert.ToInt32(item.Tag);
+            string petType= Convert.ToString(item.Content);
+            frmShow.Content = new AanvraagResidency(this, id, petType);
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             if (frmShow.CanGoBack) frmShow.NavigationService.GoBack();
+        }
+
+        private void frmShow_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }

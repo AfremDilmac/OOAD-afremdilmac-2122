@@ -41,7 +41,7 @@ namespace WpfAdmin
             lblPassword.Content = "";
 
             // laad alle werknemers in
-            List<User> allEmps = User.GetAllClients();
+            List<User> allEmps = User.GetAll();
             foreach (User emp in allEmps)
             {
                 ListBoxItem item = new ListBoxItem();

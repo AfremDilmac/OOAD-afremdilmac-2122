@@ -35,15 +35,7 @@ namespace WpfAdmin
             user.Password = txtPassword.Text;
             user.FirstName = txtFirstName.Text;
             user.LastName = txtLastName.Text;
-            if (cbxRole.SelectedIndex == 0)
-            {
-                user.Role = "user";
-            }
-            else
-            {
-                user.Role = "admin";
-            }
-            user.Id = Convert.ToInt32(txtId.Text);
+            user.Role = (cbxRole.SelectedIndex == 0) ? "user" : "admin";
             user.InsertToDb();
         }
     }

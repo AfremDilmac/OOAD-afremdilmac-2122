@@ -10,28 +10,41 @@
 
     <Grid Background="White">
         <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="400"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Content="id" HorizontalAlignment="Left" Margin="10,20,0,0" FontFamily="Verdana" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxId" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,20,0,0" TextWrapping="Wrap" FontFamily="Verdana" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="startDate: " HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="1" Width="90"/>
         <Label Content="endDate: " HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="2" Width="80"/>
-        <Label Content="Remarks: " HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="3" Width="80"/>
-        <TextBox x:Name="tbxRemarks" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Height="23" FontFamily="Verdana" Margin="10,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnEdit" FontFamily="Verdana" Content="Insert" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Center" Width="300" Height="30" Click="btnEdit_Click"/>
-        <Label Content="PetId: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="4" Width="80"/>
-        <TextBox x:Name="tbxPetId" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Height="23" FontFamily="Verdana" Margin="10,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Remarks: " HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="3" Width="80"/>
+        <TextBox x:Name="tbxRemarks" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Height="23" FontFamily="Verdana" Margin="10,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Grid.Column="1" x:Name="btnEdit" FontFamily="Verdana" Content="Insert" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Center" Width="300" Height="30" Click="btnEdit_Click"/>
         <DatePicker x:Name="dateStart" Grid.Column="1" HorizontalAlignment="Left" Margin="10,16,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <DatePicker x:Name="dateEnd" Grid.Column="1" HorizontalAlignment="Left" Margin="10,16,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <ListBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" x:Name="lbxResults" Margin="20,10,0,10" SelectionChanged="LbxResults_SelectionChanged" Background="#FFC8D8E4"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="Packages: " HorizontalAlignment="Center" Margin="10,15,0,0" VerticalAlignment="Top" FontFamily="Verdana" Width="90"/>
+        <Label Grid.Row="4" Grid.Column="1" Content="Options: " HorizontalAlignment="Center" Margin="40,10,70,0" VerticalAlignment="Top" FontFamily="Verdana" Width="90" RenderTransformOrigin="-0.238,0.803"/>
+        <Label x:Name="lblPackageName" Content="Option id" HorizontalAlignment="Left" Margin="137,10,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="4" Width="253" Grid.Column="2" RenderTransformOrigin="0.489,-1.016"/>
+        <Label x:Name="lblPackagePrice" Content="Package price" HorizontalAlignment="Left" Margin="138,49,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="4" Width="80" Grid.Column="2" RenderTransformOrigin="0.28,0.53"/>
+        <Label x:Name="lblOptionName" Content="Option Name" HorizontalAlignment="Left" Margin="40,45,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="4" Width="150" Grid.Column="1"/>
+        <Label Content="Package price:" HorizontalAlignment="Left" Margin="20,49,0,0" FontFamily="Verdana" Grid.Row="4" Width="113" Grid.Column="2" RenderTransformOrigin="0.267,0.363"/>
+        <Label Content="Package name" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="4" Width="105" Grid.Column="2" RenderTransformOrigin="0.054,0.628"/>
+        <Label x:Name="lblOptionName_Copy" Content="Option Name" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="4" Width="93" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblOptionName_Copy1" Content="Description" HorizontalAlignment="Left" Margin="7,5,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="5" Width="93"/>
+        <Label x:Name="lblOptionDescription" Content="Description" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="5" Width="550" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblOptionName_Copy2" Content="PricePerDay" HorizontalAlignment="Left" Margin="7,39,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="5" Width="93"/>
+        <Label x:Name="lblPrice" Content="Price" HorizontalAlignment="Left" Margin="26,39,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="5" Width="133" Grid.Column="1"/>
+        <Label x:Name="lblOptionName_Copy3" Content="TotalPrice&#xD;&#xA;PerDay" HorizontalAlignment="Left" Margin="7,10,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="6" Width="93" Height="47"/>
+        <Label x:Name="lblTotalPrice" Content="TotalPrice" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" FontFamily="Verdana" Grid.Row="6" Width="93" Grid.Column="1"/>
     </Grid>
 </Page>

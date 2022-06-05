@@ -24,6 +24,7 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
+            <TextBlock Height="34" TextWrapping="Wrap" Text="Huisdieren" VerticalAlignment="Bottom" Margin="16,-54,32,51" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" Foreground="White" FontWeight="Bold"/>
             <Label Content="Pet ID" FontWeight="Bold" />
             <Label Grid.Column="1" x:Name="lblId" />
             <Label Grid.Row="1" Content="Name" FontWeight="Bold" />
@@ -42,6 +43,7 @@
             <Label Grid.Row="7" Grid.Column="1" x:Name="lblType" />
         </Grid>
         <ListBox x:Name="lbxResults" Margin="20,10,0,10" SelectionChanged="LbxResults_SelectionChanged" Background="#FFC8D8E4"/>
+
 
     </DockPanel>
 </Page>

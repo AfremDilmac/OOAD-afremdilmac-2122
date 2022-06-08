@@ -22,6 +22,7 @@ namespace WpfAdmin
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         string connString = ConfigurationManager.AppSettings["connString"];
         public MainWindow()
         {

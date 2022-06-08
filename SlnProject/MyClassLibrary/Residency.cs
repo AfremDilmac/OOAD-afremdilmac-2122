@@ -13,7 +13,6 @@ namespace MyClassLibrary
         //variable
         private static string connString = ConfigurationManager.AppSettings["connString"];
   
-
         public int Id { get; set; }
         public DateTime? Startdate { get; set; }
         public DateTime? EndDate { get; set; }

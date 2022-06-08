@@ -25,11 +25,25 @@ namespace WpfUser
         {
             InitializeComponent();
             ReloadResidency(null, userid);
+            ReloadFoto(null);
             btnNew.IsEnabled = false;
         }
         private void LbxResidency_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
           
+        }
+
+        private void btnClickItem(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            int id = (int)btn.Tag;
+            
+          
+        }
+
+        public void ReloadFoto(int? selectedId)
+        {
+            
         }
 
         private void LbxPet_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -56,6 +70,37 @@ namespace WpfUser
                 {
                     lbxResidency.Items.Add(item2);
                 }
+            }
+
+            wrpItem.Children.Clear();
+            List<Foto> items = Foto.GetPetById(pet.Id);
+            int i = 0;
+            foreach (Foto test in items)
+            {
+                Button btn = new Button();
+                btn.Name = $"btn{i + 1}";
+                btn.Tag = test.Id;
+                btn.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                btn.BorderBrush = Brushes.White;
+                btn.Click += new RoutedEventHandler(btnClickItem);
+
+                StackPanel s = new StackPanel();
+
+                Image image = new Image();
+                image.Width = 180;
+                image.Height = 150;
+                image.Source = test.Image;
+
+                Label l = new Label();
+                l.Content = test.ToString();
+                l.Width = 180;
+                l.HorizontalContentAlignment = HorizontalAlignment.Center;
+                l.FontSize = 10;
+
+                s.Children.Add(image);
+                s.Children.Add(l);
+                btn.Content = s;
+                wrpItem.Children.Add(btn);
             }
 
         }

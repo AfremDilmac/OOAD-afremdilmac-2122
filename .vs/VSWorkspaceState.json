@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\SlnLes06ClassesProperties",
-    "\\SlnLes06ClassesProperties\\ConsoleKaartspel1",
     "\\SlnLes06ClassesProperties\\ConsoleVeiling",
     "\\SlnLes07StaticEnum",
     "\\SlnLes08Overerving",
     "\\SlnProject",
+    "\\SlnProject\\MyClassLibrary",
     "\\SlnProject\\WpfAdmin",
     "\\SlnProject\\WpfGebruiker",
     "\\SlnProject\\WpfUser"
   ],
-  "SelectedNode": "\\SlnProject\\SlnProject.sln",
+  "SelectedNode": "\\SlnProject\\MyClassLibrary\\Foto.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -38,5 +38,10 @@ namespace WpfAdmin
             user.Role = (cbxRole.SelectedIndex == 0) ? "user" : "admin";
             user.InsertToDb();
         }
+
+        private void cbxRole_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

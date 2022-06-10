@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SlnLes06ClassesProperties",
     "\\SlnLes06ClassesProperties\\ConsoleVeiling",
-    "\\SlnLes07StaticEnum",
     "\\SlnLes08Overerving",
     "\\SlnProject",
     "\\SlnProject\\MyClassLibrary",
@@ -11,6 +9,6 @@
     "\\SlnProject\\WpfGebruiker",
     "\\SlnProject\\WpfUser"
   ],
-  "SelectedNode": "\\SlnProject\\MyClassLibrary\\Foto.cs",
+  "SelectedNode": "\\SlnProject\\WpfUser\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }
